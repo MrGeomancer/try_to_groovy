@@ -4,6 +4,8 @@ import asyncio
 import yt_dlp as youtube_dl
 from youtubesearchpython import VideosSearch
 
+import config
+
 intents = discord.Intents.default()
 intents.all()
 
@@ -64,5 +66,5 @@ async def on_message(message):
 @bot.command()
 async def play(ctx, url):
     await play_one_song(ctx,url)
-bot.run('MTE5NTM3NDg2MTczNzAxMzMwMA.GqkKL8.-RFzcEIzJU9C390pjHVeuF_hvp2QAzas5X_VbQ')
+bot.run(config.token)
 
